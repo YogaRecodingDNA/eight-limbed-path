@@ -1,50 +1,48 @@
-import { GoBell, GoCloudDownload, GoFlame, GoDatabase, GoHome } from "react-icons/go";
-import Button from "./components/Button";
+
+import Accordion from "./components/Accordion";
 
 const App = () => {
 
-  const handleClick = () => {
-    console.log('Click!');
-  }
+  const items = [
+    {
+      id: 'jalsdkjfh',
+      label: '1st Accordion Label',
+      content: 'This is the content inside of the first accordion dropdown. This is the content inside of the first accordion dropdown. This is the content inside of the first accordion dropdown.'
+    },
+    {
+      id: 'alksdjfhl',
+      label: '2nd Accordion Label',
+      content: 'This is the content inside of the second accordion dropdown. This is the content inside of the second accordion dropdown. This is the content inside of the second accordion dropdown.'
+    },
+    {
+      id: 'asdfhpiwrhljk',
+      label: '3rd Accordion Label',
+      content: 'This is the content inside of the third accordion dropdown. This is the content inside of the third accordion dropdown. This is the content inside of the third accordion dropdown.'
+    }
+  ]
 
-  return (
-    <div>
-      <div>
-        <Button
-          primary
-          rounded
-          className='mb-5'
-          onClick={handleClick}
-        >
-          <GoBell /> Primary
-        </Button>
-      </div>
-      <div>
-        <Button secondary onMouseEnter={handleClick}>
-          <GoHome />
-          Secondary
-        </Button>
-      </div>
-      <div>
-        <Button success onMouseLeave={handleClick}>
-          <GoCloudDownload />
-          Success
-        </Button>
-      </div>
-      <div>
-        <Button warning outlined>
-          <GoDatabase />
-          Warning
-        </Button>
-      </div>
-      <div>
-        <Button danger outlined rounded>
-          <GoFlame />
-          Danger
-        </Button>
-      </div>
-    </div>
-  )
+  return <Accordion items={items} />;
 }
 
 export default App;
+
+
+
+// function myFunction(items, expandedIndex) {
+  //   return items.map( (item, index) => {
+  //     if (index === expandedIndex) {
+  //       return 'Expanded!';
+  //     } else {
+  //       return 'collapsed';
+  //     }
+  //   });
+  // }
+
+  // myFunction(propsItems, /* ?? */); // ['Expanded!', 'collapsed', 'collapsed']
+  // // MAYBE?? --------------------------> index 0
+  // myFunction(propsItems, 0); // ['Expanded!', 'collapsed', 'collapsed']
+
+
+  // myFunction(propsItems, /* ?? */); // ['collapsed', 'collapsed', 'Expanded!']
+  // // MAYBE?? -----------------------------------------------------> index 2
+  // myFunction(propsItems, 2); // ['collapsed', 'collapsed', 'Expanded!']
