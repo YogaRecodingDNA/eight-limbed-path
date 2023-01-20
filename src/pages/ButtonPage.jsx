@@ -24,25 +24,22 @@ const ButtonPage = () => {
         </Button>
       </div>
       <div>
-        <Button success onMouseLeave={handleClick}>
-          <GoCloudDownload />
-          Success
-        </Button>
+        <Button success onMouseLeave={handleClick}>Success</Button>
       </div>
       <div>
-        <Button warning outlined>
-          <GoDatabase />
-          Warning
-        </Button>
+        <Button warning outlined>Warning</Button>
       </div>
       <div>
-        <Button danger outlined rounded>
-          <GoFlame />
-          Danger
-        </Button>
+        <Button danger outlined rounded>Danger</Button>
       </div>
     </div>
   )
 }
 
 export default ButtonPage;
+
+{/* <GoCloudDownload /> */}
+
+{/* <GoDatabase /> */}
+
+{/* <GoFlame /> */}
